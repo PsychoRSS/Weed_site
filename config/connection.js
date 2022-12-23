@@ -1,24 +1,4 @@
-// const Sequelize = require('sequelize');
-// require('dotenv').config();
 
-// let sequelize;
+const {connect, mongoose} = require('mongoose');
 
-// if (process.env.JAWSDB_URL) {
-//   sequelize = new Sequelize(process.env.JAWSDB_URL);
-// } else {
-//   sequelize = new Sequelize(
-//     process.env.DB_NAME,
-//     process.env.DB_USER,
-//     process.env.DB_PASSWORD,
-//     {
-//       host: 'localhost',
-//       dialect: 'mysql',
-//       port: 3306
-//     }
-//   );
-// }
-
-// module.exports = sequelize;
-const mongoose = require('mongoose');
-
-const mongoose = new mongoose('https')
+const mongoose = new mongoose('mongodb://localhost:27017/Weed')
