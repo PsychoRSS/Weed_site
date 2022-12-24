@@ -28,4 +28,6 @@ const DabSchema = new Schema({
 
 })
 
-module.exports = DabSchema
+const Dab = model('Dab', DabSchema)
+
+module.exports = Dab

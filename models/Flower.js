@@ -3,29 +3,40 @@ const {Schema, model } = require('mongoose');
 const FlowerSchema = new Schema({
     name: {
         type:String,
-        required: true
+        require:true
     },
     weight: {
         type: Number,
-        required:true,
+        require:true,
     },
     price: {
         type:Number,
-        required:true
+        require:true
     },
     sativa: {
         type:Boolean,
-        required:true
+        require:true
     },
     indica: {
         type:Boolean,
-        required:true
-    },
+        require:true
+    },  
     hybrid: {
         type:Boolean,
-        required:true
+        require:true
+    },
+    THC:{
+        type:Number,
+        require:true
+    },
+    CBD:{
+        type:Number,
+        require:true
     }
+  
 
 })
 
-module.exports = FlowerSchema
+const Flower = model('Flower', FlowerSchema)
+
+module.exports = Flower
