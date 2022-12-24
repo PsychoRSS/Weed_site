@@ -3,11 +3,11 @@ const {Schema, model } = require('mongoose');
 const DabSchema = new Schema({
     name: {
         type:String,
-        required: true
+        require: true
     },
     weight: {
         type: Number,
-        required:true,
+        require:true,
     },
     price: {
         type:Number,
@@ -23,6 +23,14 @@ const DabSchema = new Schema({
     },
     hybrid: {
         type:Boolean,
+        require:true
+    },
+    THC:{
+        type:Number,
+        require:true
+    },
+    CBD:{
+        type:Number,
         require:true
     }
 
