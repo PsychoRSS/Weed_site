@@ -1,8 +1,14 @@
 const router = require('express').Router();
 const { Flower,Dab } = require('../Models')
 
-router.la
-('/all', (req,res) => {
+router.get('/all', (req,res) => {
     
-    Flower.find
+    const flowerData = Flower.findAll()
+
+    return res.status(200).json(flowerData)
+
+});
+
+router.post('/hru', (req, res) => {
+    return res.status(200).json(Flower)
 })
