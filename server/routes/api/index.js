@@ -1,12 +1,12 @@
 const router = require('express').Router();
 // const router = require('express').Router();
-const api = require('./api')
+const allWeed = require('./allWeed')
 // const { clog } = require('../middleware/clog');
 // const { Router } = require('express');
 
 
 
-router.use('/api', api);
+router.use('/all', allWeed);
 
 // router.use(clog);
 
