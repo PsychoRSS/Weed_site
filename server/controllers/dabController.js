@@ -1,4 +1,4 @@
-const Dab = require('../Models/Dab')
+const {Dab} = require('../Models')
 
 module.exports = {
     getDab(req, res) {

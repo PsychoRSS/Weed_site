@@ -1,4 +1,5 @@
-const Flower = require('./Flower')
-const Dab = require('./Dab')
+const Flower = require('./Flower');
+const Dab = require('./Dab');
+const Account = require('./account');
 
-module.exports = {Flower,Dab}
+module.exports = { Dab, Flower, Account };
