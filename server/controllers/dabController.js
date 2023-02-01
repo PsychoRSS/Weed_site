@@ -22,5 +22,9 @@ module.exports = {
             console.log(err);
             return res.status(500).json(err);
         })
+    },
+    deleteDab(req, res) {
+        Dab.remove(req.body)
+        .then((dab) => res.json(dab))
     }
 }
