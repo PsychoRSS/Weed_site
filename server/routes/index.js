@@ -1,13 +1,9 @@
 const router = require('express').Router();
-// const router = require('express').Router();
 const api = require('./api')
-// const { clog } = require('../middleware/clog');
-// const { Router } = require('express');
-
 
 
 router.use('/api', api);
 
-// router.use(clog);
+
 
 module.exports = router

@@ -1,13 +1,9 @@
 const router = require('express').Router();
-// const router = require('express').Router();
-const allWeed = require('./allWeed')
-// const { clog } = require('../middleware/clog');
-// const { Router } = require('express');
+const flowerWeed = require('./flowerRoute')
+const dabWeed = require('./dabRoute')
 
+router.use('/flower', flowerWeed);
+router.use('/dab', dabWeed)
 
-
-router.use('/all', allWeed);
-
-// router.use(clog);
 
 module.exports = router
