@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('./Config/connection');
+const db = require('./config/connection');
 // const { Flower,Dab } = require('./Models');
 const routes = require('./routes')
 const PORT = process.env.PORT || 3001;

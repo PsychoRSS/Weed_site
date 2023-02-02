@@ -23,5 +23,16 @@ module.exports = {
             return res.status(500).json(err);
         });
     },
+    deleteFlower(req, res) {
+        Flower.deleteOne({_id: req.params.flowerid})
+        .then((flower) =>
+        !flower
+        ?res.status(404).json({message: 'No flower With that ID'})
+        :res.json(flower))
+        .catch((err) => { 
+            console.log(err);
+          return res.status(500).json(err)
+        })
+    },
     
 }
