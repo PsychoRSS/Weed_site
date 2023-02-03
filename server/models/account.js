@@ -7,7 +7,7 @@ const account = new Schema({
         require:true
     },
     email:{
-        type:email,
+        type:String,
         require:true,
         unique:true,
         match:[/.+@.+\..+/, 'Must match an email address!'],
@@ -21,7 +21,7 @@ const account = new Schema({
    
 });
 
-accountSchema.pre('save', async function(next) {
+account.pre('save', async function(next) {
     if (this.isNew || this.isModified('password')) {
         const saltRounds = 10;
         this.password = await bcrypt.hash(this.password, saltRounds);
@@ -30,7 +30,7 @@ accountSchema.pre('save', async function(next) {
     next();
 });
 
-accountSchema.methods.isCorrectPassword() = async function (password) {
+account.methods.isCorrectPassword = async function (password) {
     return bcrypt.compare(password, this.password);
 }
 

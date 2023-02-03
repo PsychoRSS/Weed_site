@@ -8,6 +8,6 @@ const {getFlower,
     } = require('../../controllers/weedController')
 
 router.route('/').get(getFlower).post(createFlower)
-router.route('/:id').get(getOneFlower)
+router.route('/:name').get(getOneFlower)
 
 module.exports = router;

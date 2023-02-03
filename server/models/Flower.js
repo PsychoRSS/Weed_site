@@ -1,6 +1,10 @@
 const {Schema, model } = require('mongoose');
 
 const FlowerSchema = new Schema({
+    id: {
+        type:Number,
+        require:true
+    },
     name: {
         type:String,
         require:true
@@ -35,8 +39,8 @@ const FlowerSchema = new Schema({
     }
   
 
-})
+});
 
-const Flower = model('Flower', FlowerSchema)
+const Flower = model('Flower', FlowerSchema);
 
-module.exports = Flower
+module.exports = Flower;

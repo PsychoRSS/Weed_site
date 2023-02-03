@@ -1,4 +1,4 @@
-const {Dab} = require('../Models')
+const Dab = require('../Models/Dab')
 
 module.exports = {
     getDab(req, res) {
@@ -7,10 +7,10 @@ module.exports = {
         .catch((err) => res.json(err));
     },
     getOneDab(req, res) {
-        Dab.findById({ _id: req.params.dabid})
+        Dab.findOne({ name: req.params.name})
         .then((dab) => 
         !dab
-        ? res.status(404).json({ message: 'no Dab with this ID'})
+        ? res.status(404).json({ message: 'no Dab with this Name'})
         : res.json(dab)
         )
         .catch((err) => res.status(500).json(err))

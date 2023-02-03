@@ -1,4 +1,10 @@
 const router = require('express').Router();
 const {
-    getDab
-} = require('../../controllers')
+    getDab,
+    getOneDab
+} = require('../../controllers/dabController')
+
+router.route('/').get(getDab)
+router.route('/:name').get(getOneDab)
+
+module.exports = router;

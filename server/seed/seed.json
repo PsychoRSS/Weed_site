@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "weed",
         "weight": 3,
         "price": 3.99,

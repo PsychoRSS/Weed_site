@@ -3,7 +3,7 @@ const db = require('./config/connection');
 // const { Flower,Dab } = require('./Models');
 const routes = require('./routes')
 const PORT = process.env.PORT || 3001;
-const { clog } = require('./middleware/clog');
+const { clog } = require('./Clog/clog');
 
 const app = express();
 

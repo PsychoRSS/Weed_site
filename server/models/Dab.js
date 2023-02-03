@@ -1,6 +1,9 @@
 const {Schema, model } = require('mongoose');
 
 const DabSchema = new Schema({
+    id:{
+        type:Number
+    },
     name: {
         type:String,
         require: true
