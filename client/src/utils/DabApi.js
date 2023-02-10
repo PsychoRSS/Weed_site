@@ -1,5 +1,5 @@
 export const getDab = () => {
-    return fetch ('/api/dab/', {
+    return fetch (`/api/dab/`, {
         method: 'GET',
         headers: {
             'Content-Type':  'application/json',
@@ -8,7 +8,7 @@ export const getDab = () => {
 };
 
 export const createDab = (dabData) => {
-    return fetch('/api/flower', {
+    return fetch(`/api/dab/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ export const createDab = (dabData) => {
   };
   
 export const getOneDab= (dabName) => {
-    return fetch(`/api/flower/${dabName}`, {
+    return fetch(`/api/dab/${dabName}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const getOneDab= (dabName) => {
   };
 
 export const deleteDab = (dabName) => {
-  return fetch('/api/flower', {
+  return fetch(`/api/dab/${dabname}`, {
     method: 'DELETE'
   })
 }

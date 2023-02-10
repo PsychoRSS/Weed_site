@@ -1,5 +1,5 @@
 export const getFlower = () => {
-    return fetch ('/api/flower/', {
+     return fetch (`/api/flower/`, {
         method: 'GET',
         headers: {
             'Content-Type':  'application/json',
@@ -8,7 +8,7 @@ export const getFlower = () => {
 };
 
 export const createFlower = (flowerData) => {
-    return fetch('/api/flower', {
+    return fetch(`/api/flower/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
