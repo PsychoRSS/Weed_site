@@ -28,9 +28,12 @@ export const getOneDab= (dabName) => {
 
 export const deleteDab = (dabName) => {
   return fetch(`/api/dab/${dabname}`, {
-    method: 'DELETE'
-  })
-}
+    method: 'DELETE',
+    headers:  {
+      'Content-Type': 'application/json',
+    },
+  });
+};
   
 
   
