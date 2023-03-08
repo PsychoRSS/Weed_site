@@ -6,12 +6,13 @@ const Home = () => {
     const hello = "Hello"
     return (
         <body>
-            <header>
+        <header>
                Weed-site
             </header>
             
-            <div>
+            <div className="pt-6 pr-4 text-orange-600 ">
                 <h1>Categories</h1>
+                
 
             </div>
 
@@ -21,15 +22,15 @@ const Home = () => {
             </div>
 
             <div>
-                <h1>Edible</h1>
+                <h1>Edibles</h1>
                 
             </div>
 
             <footer>
                 <li>
-                    <p>GitHub: PsychoRS</p>
-                    <p>Email:yeswhy99@gmail.com</p>
-                    <p>Portfolio:IDK</p>
+                    <li>GitHub: PsychoRS</li>
+                    <li>Email:yeswhy99@gmail.com</li>
+                    <li>Portfolio:IDK</li>
                 </li>
             </footer>
         </body>
