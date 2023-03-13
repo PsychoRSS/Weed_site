@@ -10,7 +10,7 @@ const Home = () => {
                Weed-site
             </header>
             
-            <div className="pt-6 pr-4 text-orange-600 ">
+            <div className="pt-6 pr-4 text-lime-600 ">
                 <h1>Categories</h1>
                 
 
