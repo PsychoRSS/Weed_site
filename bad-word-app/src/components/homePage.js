@@ -6,8 +6,8 @@ const Home = () => {
     const hello = "Hello"
     return (
         <body>
-        <header>
-               Weed-site
+        <header className='text-2xl flex justify-center text-red-800 font-serif bg-gradient-to-tr from-lime-500 to-green-400 py-8 '>
+               Maroone
             </header>
             
             <div className="pt-6 pr-4 text-lime-600 ">
