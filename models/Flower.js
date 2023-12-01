@@ -19,4 +19,14 @@ Flower.init({
         type: DataTypes.DECIMAL,
         allownull:false
     }
-})
+},
+{
+    sequelize,
+    timestamps:false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'flower'
+}
+);
+
+module.exports = Flower

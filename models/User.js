@@ -26,5 +26,23 @@ User.init({
         type: DataTypes.STRING,
         allownull:false,
         
+    },
+    weed: {
+        type: DataTypes.INTEGER,
+        refrences: {
+            model: 'flower',
+            key: 'id'
+        }
     }
-})
+
+    },
+    {
+        sequelize,
+        timestamps:false,
+        freezeTableName: true,
+        underscored:true,
+        modelName: 'user',
+    }
+);
+
+module.exports = User
