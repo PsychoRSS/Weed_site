@@ -7,7 +7,7 @@ class Flower extends Model {}
 Flower.init({
     id:{
         type: DataTypes.INTEGER,
-        allowNull: flase,
+        allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
