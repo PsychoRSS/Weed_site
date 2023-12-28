@@ -1,11 +1,20 @@
 const sequelize = require('../config/connection');
-const seedFlower = require('./flowers')
-
+const seedFlower = require('./flowers');
+console.log(sequelize.sync({force: true}.then() ))
 
 const seedAll = async () => {
-    await sequelize.sync({force:true});
+    try {
+    await sequelize.sync({force:true})
 
     await seedFlower();
 
-    console.log("complete")
+    console.log("complete");
+
+    process.exit(0)
+
+    } catch (err) {
+        console.log(err)
+    }
 }
+
+// seedAll()

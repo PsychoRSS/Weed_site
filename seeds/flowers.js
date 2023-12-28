@@ -21,5 +21,6 @@ const allFLower = [
 
 const seedFlower = () => Flower.bulkCreate(allFLower)
 
+console.log("flowers")
 
 module.exports = seedFlower;
