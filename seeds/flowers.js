@@ -1,4 +1,4 @@
-const Flower = require('../models')
+const { Flower } = require('../models')
 
 const allFLower = [
     {
@@ -21,6 +21,5 @@ const allFLower = [
 
 const seedFlower = () => Flower.bulkCreate(allFLower)
 
-console.log("flowers")
 
 module.exports = seedFlower;

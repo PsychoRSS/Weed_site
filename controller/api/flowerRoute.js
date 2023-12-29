@@ -1,16 +1,12 @@
-const router = require('express').Router();
-const {Flower, User} = require('../models');
+const Router = require('express').Router;
 
-// Homepage
+// Gets all avalible flower
 router.get('/', async (req,res) => {
     try {
         const allFlower = await Flower.findAll();
-        res.render()
         res.status(200).json(allFlower)
     } catch (err) {
         console.log(err)
 
     }
 });
-
-module.exports = router

@@ -4,4 +4,4 @@ const User = require('./User');
 User.hasMany(Flower);
 
 
-module.exports = { User , Flower}
+module.exports = { User , Flower }

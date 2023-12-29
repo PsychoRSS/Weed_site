@@ -1,6 +1,6 @@
 const sequelize = require('../config/connection');
 const seedFlower = require('./flowers');
-console.log(sequelize.sync({force: true}.then() ))
+
 
 const seedAll = async () => {
     try {
@@ -17,4 +17,4 @@ const seedAll = async () => {
     }
 }
 
-// seedAll()
+seedAll()
