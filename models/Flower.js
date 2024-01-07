@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes } from 'sequelize';
+const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
@@ -7,16 +7,26 @@ class Flower extends Model {}
 Flower.init({
     id:{
         type: DataTypes.INTEGER,
-        allownull: flase,
+        allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
     name: {
         type: DataTypes.STRING,
-        allownull:false
+        allowNull:false
     },
     THC: {
         type: DataTypes.DECIMAL,
-        allownull:false
+        allowNull:false
     }
-})
+},
+{
+    sequelize,
+    timestamps:false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'flower'
+}
+);
+
+module.exports = Flower

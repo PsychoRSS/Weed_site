@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes } from 'sequelize';
+const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
@@ -7,7 +7,8 @@ class User extends Model {}
 User.init({
     id: {
         type: DataTypes.INTEGER,
-        allownull:false
+        allownull:false,
+        primaryKey: true
     },
     username: {
         type: DataTypes.STRING,
@@ -26,5 +27,23 @@ User.init({
         type: DataTypes.STRING,
         allownull:false,
         
+    },
+    weed: {
+        type: DataTypes.INTEGER,
+        refrences: {
+            model: 'flower',
+            key: 'id'
+        }
     }
-})
+
+    },
+    {
+        sequelize,
+        timestamps:false,
+        freezeTableName: true,
+        underscored:true,
+        modelName: 'user',
+    }
+);
+
+module.exports = User
