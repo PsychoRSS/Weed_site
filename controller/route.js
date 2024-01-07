@@ -5,8 +5,8 @@ const {Flower, User} = require('../models');
 router.get('/', async (req,res) => {
     try {
         const allFlower = await Flower.findAll();
-        res.render()
-        res.status(200).json(allFlower)
+        // res.status(200).json(allFlower)
+        res.render('homepage');
     } catch (err) {
         console.log(err)
 
