@@ -1,0 +1,21 @@
+:root{
+    --eerie_black: #1d1e18;
+    --Sgbus_green: #87e752;
+    --violet: #4d243d;
+    --teal: #087e8b;
+    --crimson: #d80032;
+}
+body{
+    background-color: var(--violet);
+}
+
+.header{
+    background-color: var(--Sgbus_green);
+    font-weight: 200;
+    color: var(--eerie_black);
+
+}
+
+.weed-cards{
+    background-color: #087e8b;
+}
