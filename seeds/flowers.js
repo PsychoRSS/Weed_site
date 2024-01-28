@@ -17,7 +17,8 @@ const allFLower = [
         "name": "tommorow land",
         "THC": 60.17
     }
-];
+]
+;
 
 const seedFlower = () => Flower.bulkCreate(allFLower)
 

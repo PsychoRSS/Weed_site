@@ -4,9 +4,19 @@ const {Flower, User} = require('../models');
 // Homepage
 router.get('/', async (req,res) => {
     try {
-        const allFlower = await Flower.findAll();
-        // res.status(200).json(allFlower)
-        res.render('homepage');
+        
+        let allFlower = await Flower.findAll();
+        
+
+        let flower = allFlower.map((flowers)=> flowers.get({plain:true}));
+
+        res.render('homepage', {
+            flower
+        });
+
+        // res.status(200).json(flower)
+        // console.log(allFlower[0].id)
+
     } catch (err) {
         console.log(err)
 

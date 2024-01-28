@@ -13,7 +13,8 @@ body{
     background-color: var(--Sgbus_green);
     font-weight: 200;
     color: var(--eerie_black);
-
+    height:100px;
+    
 }
 
 .weed-cards{
